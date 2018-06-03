@@ -1,0 +1,8 @@
+ErrorDocument 404 /Promise/AlbumShowRoom/404.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /Promise/AlbumShowRoom/admin-panel/
+RewriteRule ^albums/?$ albums.php [NC,L]
+RewriteRule ^test/?$ test.php [NC,L]
+</IfModule>
