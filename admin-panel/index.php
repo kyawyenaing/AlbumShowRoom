@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <!-- <html><head> -->
 	<title>Admin Login</title>
@@ -15,10 +18,12 @@
 				</div>
 				<div class="panel-body">	
 					<form class="form-horizontal col-md-offset-2 col-md-10" action="login.php" method="POST">
-						<? if(isset($_GET['login']) and $_GET['login']=="failed"):?>
+						<? if(isset($_SESSION['message'])):?>
 							<div class="col-md-offset-2">
 								<strong class="text-danger">
-									Woop! Wrong!
+									<?php echo $_SESSION['message'] ; 
+										session_destroy();
+									?>
 								</strong>
 							</div>
 						<? endif;?>
@@ -68,4 +73,5 @@
 				</div>
 			</div>
 		</div>
-	</div></body></html>
+	</div>
+</body></html>

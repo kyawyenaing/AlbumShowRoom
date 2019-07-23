@@ -1,5 +1,5 @@
 <?php
-  // session_start();
+  session_start();
 
   $name = $_POST['name'];
   $password = $_POST['password'];
@@ -8,8 +8,15 @@
     $_SESSION['auth'] = true;
     header("location: albums.php");
   } elseif(($name !="admin" and $password != "123456") || ($name =="" or $password="")) {
-    header("location:index.php?login=failed");
+    $_SESSION['message'] = "Invalid Login";
+    header("location:index.php");
   } elseif($name != "admin") {
-    header("location:index.php?username=wrong_name");
+    $_SESSION['message'] = "Incorrect username";
+    header("location:index.php");
+  } else {
+    header("location:index.php?password=wrong_password");
   }
-?>
+
+
+
+

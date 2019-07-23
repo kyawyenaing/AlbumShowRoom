@@ -2,14 +2,60 @@
   $dbhost = "localhost";
   $dbuser = "root";
   $dbpass = "";
-  $dbname = "store";
+  $dbname = "album_show_rooms";
 
-  $conn = mysqli_connect($dbhost, $dbuser, $dbpass); //MySQLi Procedural
-  // $conn = new mysqli($dbhost, $dbuser, $dbpass); //MySQLi Object-Oriented
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  } else {
-  	mysqli_select_db($conn, $dbname);
-  }
+  $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname); 
+  // if(!$conn) {
+  //   die("Couldn't connect");
+  // } else {
+  //   mysqli_select_db($conn, $dbname);
+  // }
+
   
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
